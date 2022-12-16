@@ -19,7 +19,7 @@ const options = {
     family: 4
 }
 
-mongoose.connect('mongodb://localhost:27017/cs4550-fa22', options)
+mongoose.connect('mongodb://localhost:27017/SpotiReview', options)
 
 const app = express();
 app.use(cors({

@@ -10,7 +10,7 @@ const MoviesController = (app) => {
         // movie["_id"] = (new Date()).getTime() + ''
         // movie["likes"] = 0
         // movie["liked"] = false
-        // movies.push(movie)
+        // movies.push(movie)'
         const actualMovie = await movieDao.createMovie(movie)
         res.send(actualMovie)
     }
