@@ -22,21 +22,26 @@ const options = {
 mongoose.connect('mongodb://localhost:27017/SpotiReview', options)
 
 const app = express();
+
 app.use(cors({
     credentials: true,
     origin: 'http://localhost:3000'
 }))
+
 app.use(session({
     secret: 'should be an environment variable',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
 }))
+
 app.use(express.json())
+
 MoviesController(app)
 LikesController(app)
 UsersController(app)
 SessionController(app)
 ReviewsController(app)
 FollowsController(app)
+
 app.listen(4000)

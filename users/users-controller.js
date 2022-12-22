@@ -7,7 +7,9 @@ const UsersController = (app) => {
     const findAllUsers = async (req, res) => {
         const users = await userDao.findAllUsers()
         res.json(users)
+        //res.send('hello world')
     }
+
     const createUser = async (req, res) => {
         const newUser = req.body;
         console.log(newUser);
